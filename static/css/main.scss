@@ -1,0 +1,96 @@
+@import "normalize";
+
+html {
+    font: {
+        family: "PT Serif", medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+        size: 18px;
+    }
+}
+
+.article {
+    margin: 0 auto;
+
+    &__header {
+        align-items: center;
+        background: {
+            position: center center;
+            repeat: no-repeat;
+            size: cover;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &--image {
+            height: 100vh;
+        }
+    }
+
+    &__title, &__timestamp, &__stats {
+        background: #FFF;
+        flex: 0 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        font: {
+            family: "Fira Sans", Helvetica, Arial, sans-serif;
+            size: 3em;
+            weight: 500;
+        }
+        padding: .4em .6em;
+    }
+
+    &__timestamp {
+        padding: .6em .8em;
+    }
+
+    &__stats {
+        color: #555;
+        padding: .6em .8em;
+    }
+
+    &__content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    &__text {
+        margin: 3em auto 0;
+        max-width: 1020px;
+    }
+}
+
+.text {
+
+    line-height: 1.428;
+
+    > * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p {
+        max-width: 700px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    figure {
+        &.left, &.right {
+            max-width: calc(50% - 1em);
+        }
+
+        &.left {
+            float: left;
+            margin-right: 2em;
+        }
+
+        &.right {
+            float: right;
+            margin-left: 2em;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+
+{{ range sort .Paginator.Pages }}
+<article>
+	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+	{{ .Summary | plainify | safeHTML }}
+
+	{{ if .Truncated }}
+	<a href="{{ .Permalink }}">read more</a>
+	{{ end }}
+</article>
+{{ end }}
+
+{{ partial "footer.html" . }}
