@@ -8,6 +8,17 @@ $header-font: "Fira Sans", Helvetica, Arial, sans-serif;
 
 $link-color: #0027b7;
 
+@mixin header-link() {
+    a {
+        color: #000;
+        text-decoration: none;
+
+        &:hover {
+            color: $link-color;
+        }
+    }
+}
+
 html {
     font: {
         family: $default-font;
@@ -145,14 +156,7 @@ html {
                 family: $header-font;
             }
 
-            a {
-                color: #000;
-                text-decoration: none;
-
-                &:hover {
-                    color: $link-color;
-                }
-            }
+            @include header-link();
         }
 
         &-summary {
