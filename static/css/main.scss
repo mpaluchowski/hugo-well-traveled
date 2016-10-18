@@ -1,10 +1,16 @@
 @import "normalize";
 
+$content-width: 1020px;
+$text-width: 700px;
+
+$default-font: "PT Serif", medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+$header-font: "Fira Sans", Helvetica, Arial, sans-serif;
+
 $link-color: #0027b7;
 
 html {
     font: {
-        family: "PT Serif", medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+        family: $default-font;
         size: 18px;
     }
 }
@@ -36,7 +42,7 @@ html {
 
     &__title {
         font: {
-            family: "Fira Sans", Helvetica, Arial, sans-serif;
+            family: $header-font;
             size: 3em;
             weight: 500;
         }
@@ -59,7 +65,7 @@ html {
 
     &__text {
         margin: 3em auto 0;
-        max-width: 1020px;
+        max-width: $content-width;
     }
 }
 
@@ -73,7 +79,8 @@ html {
     }
 
     p {
-        max-width: 700px;
+        max-width: $text-width;
+    }
 
     a {
         border-bottom: 1px solid lighten($link-color, 50%);
