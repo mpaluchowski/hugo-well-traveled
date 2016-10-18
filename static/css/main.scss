@@ -1,5 +1,7 @@
 @import "normalize";
 
+$link-color: #0027b7;
+
 html {
     font: {
         family: "PT Serif", medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -72,6 +74,15 @@ html {
 
     p {
         max-width: 700px;
+
+    a {
+        border-bottom: 1px solid lighten($link-color, 50%);
+        color: $link-color;
+        text-decoration: none;
+
+        &:hover {
+            color: #555;
+        }
     }
 
     img {
