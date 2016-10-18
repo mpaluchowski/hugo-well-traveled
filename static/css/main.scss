@@ -26,6 +26,76 @@ html {
     }
 }
 
+.section {
+    align-items: center;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    }
+    display: flex;
+    height: 100vh;
+
+    &__name {
+        background: #FFF;
+        box-sizing: border-box;
+        flex: 1 1 34%;
+        font: {
+            family: $header-font;
+            size: 4rem;
+        }
+        padding: .4em .6em;
+
+        @include header-link();
+    }
+
+    &__entries {
+        display: flex;
+        flex: 1 1 66%;
+        flex-flow: row wrap;
+    }
+
+    &__entry {
+        margin-left: 2rem;
+        background: #FFF;
+        box-sizing: border-box;
+        flex: 0 1 50%;
+
+        &:first-child {
+            flex: 1 1 100%;
+        }
+
+        &:nth-child(n + 2) {
+            font-size: .8rem;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.entry {
+    padding: 1rem 1.2rem;
+
+    &__title {
+        font: {
+            family: $header-font;
+            size: 1.8em;
+        }
+        margin: 0;
+
+        @include header-link();
+    }
+
+    &__timestamp {
+        color: #555;
+        display: block;
+        margin-top: .4em;
+    }
+
+    &__summary {
+        margin-top: 1em;
+    }
+}
+
 .article {
     margin: 0 auto;
 

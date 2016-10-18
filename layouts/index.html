@@ -1,14 +1,24 @@
 {{ partial "header.html" . }}
 
-{{ range sort .Paginator.Pages }}
-<article>
-	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-	{{ .Summary | plainify | safeHTML }}
+<main>
+    {{ range $section, $content := $.Site.Sections }}
+    <section class="section" id="section-{{ $section }}" style="background-image: url(img/{{ $section }}/header.jpg);">
+        <h2 class="section__name"><a href="{{ $section | absURL }}">{{ humanize $section }}</a></h2>
 
-	{{ if .Truncated }}
-	<a href="{{ .Permalink }}">read more</a>
-	{{ end }}
-</article>
-{{ end }}
+        <div class="section__entries">
+            {{ range where $.Paginator.Pages "Section" $section }}
+            <article class="section__entry entry">
+                <h3 class="entry__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <time class="entry__timestamp" datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006 15:04 MST" }}</time>
+
+                <div class="entry__summary text">
+                    {{ .Summary | plainify | safeHTML }}
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+</main>
 
 {{ partial "footer.html" . }}
