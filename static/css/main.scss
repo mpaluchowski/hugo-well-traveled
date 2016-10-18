@@ -160,3 +160,12 @@ html {
         }
     }
 }
+
+.footer {
+    margin: 3em 2em 2em;
+
+    &__copyright {
+        font-size: .8rem;
+        text-align: center;
+    }
+}
