@@ -20,4 +20,25 @@
     </article>
 </main>
 
+<nav class="navigator">
+    <div class="navigator__direction">
+    {{ with .PrevInSection }}
+        <span class="navigator__direction-name">Previous</span>
+        <span class="navigator__direction-link"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+        <div class="navigator__direction-summary text">
+            {{ .Summary }}
+        </div>
+    {{ end }}
+    </div>
+    <div class="navigator__direction">
+    {{ with .NextInSection }}
+        <span class="navigator__direction-name">Next</span>
+        <span class="navigator__direction-link"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+        <div class="navigator__direction-summary text">
+            {{ .Summary }}
+        </div>
+    {{ end }}
+    </div>
+</nav>
+
 {{ partial "footer.html" . }}

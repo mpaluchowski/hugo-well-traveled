@@ -112,3 +112,51 @@ html {
         }
     }
 }
+
+.navigator {
+    border-top: 1px solid #555;
+    box-sizing: border-box;
+    display: flex;
+    max-width: $content-width;
+    margin: 3em auto 0;
+    padding: 1em 0;
+
+    &__direction {
+        box-sizing: border-box;
+        flex: 0 1 50%;
+        padding: 0 .6em;
+
+        &-name {
+            color: #555;
+            display: block;
+            font: {
+                size: .8rem;
+            }
+            margin-bottom: .4em;
+
+            &:after {
+                content: ":";
+            }
+        }
+
+        &-link {
+            display: block;
+            font: {
+                family: $header-font;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+
+                &:hover {
+                    color: $link-color;
+                }
+            }
+        }
+
+        &-summary {
+            font-size: .8rem;
+        }
+    }
+}
