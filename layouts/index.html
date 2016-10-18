@@ -1,12 +1,12 @@
 {{ partial "header.html" . }}
 
 <main>
-    {{ range $section, $content := $.Site.Sections }}
-    <section class="section" id="section-{{ $section }}" style="background-image: url(img/{{ $section }}/header.jpg);">
-        <h2 class="section__name"><a href="{{ $section | absURL }}">{{ humanize $section }}</a></h2>
+    {{ range .Data.Pages.GroupBy "Section" }}
+    <section class="section" id="section-{{ .Key }}" style="background-image: url(img/{{ .Key }}/header.jpg);">
+        <h2 class="section__name"><a href="{{ .Key | absURL }}">{{ humanize .Key }}</a></h2>
 
         <div class="section__entries">
-            {{ range where $.Paginator.Pages "Section" $section }}
+            {{ range .Pages }}
             <article class="section__entry entry">
                 <h3 class="entry__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
                 <time class="entry__timestamp" datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006 15:04 MST" }}</time>
