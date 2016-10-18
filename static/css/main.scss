@@ -19,6 +19,14 @@ $link-color: #0027b7;
     }
 }
 
+@mixin background-cover() {
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
 html {
     font: {
         family: $default-font;
@@ -28,13 +36,9 @@ html {
 
 .section {
     align-items: center;
-    background: {
-        position: center center;
-        repeat: no-repeat;
-        size: cover;
-    }
     display: flex;
     height: 100vh;
+    @include background-cover();
 
     &__name {
         background: #FFF;
@@ -101,14 +105,10 @@ html {
 
     &__header {
         align-items: center;
-        background: {
-            position: center center;
-            repeat: no-repeat;
-            size: cover;
-        }
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include background-cover();
 
         &--image {
             height: 100vh;
