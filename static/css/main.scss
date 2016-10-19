@@ -265,16 +265,14 @@ html {
 }
 
 .header {
-    background: #000;
-    color: #FFF;
     position: static;
 
     a {
-        color: #FFF;
+        color: inherit;
         text-decoration: none;
 
         &:hover {
-            color: #CCC;
+            color: $link-color;
         }
     }
 
