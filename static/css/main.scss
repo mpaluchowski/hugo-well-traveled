@@ -118,6 +118,17 @@ html {
 
         @include header-font();
     }
+
+    &__entries {
+        margin: 3em auto 0;
+        width: $text-width;
+    }
+
+    &__entry {
+        & + & {
+            margin-top: 2em;
+        }
+    }
 }
 
 .article {
