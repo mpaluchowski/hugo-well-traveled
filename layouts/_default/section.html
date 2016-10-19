@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+
+<main class="list">
+    <header class="list__header" style="background-image: url(img/{{ lower .Title | singularize }}/header.jpg);">
+        <h1 class="list__title">{{ humanize .Title | singularize }}</h1>
+    </header>
+</main>
+
+{{ partial "footer.html" . }}
