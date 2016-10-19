@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <base href="{{ .Site.BaseURL }}">
 
-    <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+    <title>{{ .Title }}{{ if eq .IsHome false }} - {{ .Site.Title }}{{ end }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ .Hugo.Generator }}
