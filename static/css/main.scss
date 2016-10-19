@@ -65,10 +65,11 @@ html {
     }
 
     &__entry {
-        margin-left: 2rem;
         background: #FFF;
         box-sizing: border-box;
         flex: 0 1 50%;
+        margin-left: 2rem;
+        padding: 1rem 1.2rem;
 
         &:first-child {
             flex: 1 1 100%;
@@ -82,7 +83,6 @@ html {
 }
 
 .entry {
-    padding: 1rem 1.2rem;
 
     &__title {
         font-size: 1.8em;
