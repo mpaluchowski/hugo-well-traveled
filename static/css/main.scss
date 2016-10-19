@@ -27,6 +27,13 @@ $link-color: #0027b7;
     }
 }
 
+@mixin header-font() {
+    font: {
+        family: $header-font;
+        weight: 500;
+    }
+}
+
 html {
     font: {
         family: $default-font;
@@ -44,12 +51,10 @@ html {
         background: #FFF;
         box-sizing: border-box;
         flex: 1 1 34%;
-        font: {
-            family: $header-font;
-            size: 4rem;
-        }
+        font-size: 4rem;
         padding: .4em .6em;
 
+        @include header-font();
         @include header-link();
     }
 
@@ -80,12 +85,10 @@ html {
     padding: 1rem 1.2rem;
 
     &__title {
-        font: {
-            family: $header-font;
-            size: 1.8em;
-        }
+        font-size: 1.8em;
         margin: 0;
 
+        @include header-font();
         @include header-link();
     }
 
@@ -110,11 +113,10 @@ html {
 
     &__title {
         background: #FFF;
-        font: {
-            family: $header-font;
-            size: 4rem;
-        }
+        font-size: 4rem;
         padding: .4em .6em;
+
+        @include header-font();
     }
 }
 
@@ -140,12 +142,10 @@ html {
     }
 
     &__title {
-        font: {
-            family: $header-font;
-            size: 3em;
-            weight: 500;
-        }
+        font-size: 3em;
         padding: .4em .6em;
+
+        @include header-font();
     }
 
     &__timestamp {
