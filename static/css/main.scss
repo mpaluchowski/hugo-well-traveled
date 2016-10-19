@@ -264,6 +264,49 @@ html {
     }
 }
 
+.header {
+    background: #000;
+    color: #FFF;
+    position: static;
+
+    a {
+        color: #FFF;
+        text-decoration: none;
+
+        &:hover {
+            color: #CCC;
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 1.6rem;
+        padding: .8rem 0;
+
+        & + & {
+            padding-left: .8rem;
+
+            &:before {
+                content: ":";
+                padding-right: .8rem;
+            }
+        }
+    }
+
+    &__title {
+        font: {
+            size: 1.6rem;
+            weight: 500;
+        }
+        margin: 0;
+    }
+}
+
 .footer {
     margin: 3em 2em 2em;
 
