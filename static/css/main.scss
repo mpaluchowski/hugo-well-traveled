@@ -51,15 +51,16 @@ html {
 .section {
     display: flex;
     min-height: 100vh;
-    padding: 2rem;
     @include background-cover();
 
     @media #{$responsive-small} {
         flex-direction: column;
+        padding: $content-padding;
     }
 
     @media #{$responsive-medium-large} {
         align-items: center;
+        padding: 2rem;
     }
 
     &__name {
@@ -102,7 +103,14 @@ html {
 
         &:nth-child(n + 2) {
             font-size: .8rem;
-            margin-top: 2rem;
+
+            @media #{$responsive-small} {
+                margin-top: $content-padding;
+            }
+
+            @media #{$responsive-medium-large} {
+                margin-top: 2rem;
+            }
         }
     }
 
