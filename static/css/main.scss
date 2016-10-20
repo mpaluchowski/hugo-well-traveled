@@ -45,6 +45,7 @@ html {
     align-items: center;
     display: flex;
     height: 100vh;
+    padding: 2rem;
     @include background-cover();
 
     &__name {
