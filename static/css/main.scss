@@ -7,6 +7,7 @@ $responsive-medium-large: "only screen and (min-width: 690px)";
 $responsive-large: "only screen and (min-width: 830px)";
 
 $content-width: 1020px;
+$content-padding: 2em;
 $text-width: 700px;
 
 $default-font: "PT Serif", medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -193,8 +194,10 @@ html {
     }
 
     &__content {
-        padding-left: 2em;
-        padding-right: 2em;
+        padding: {
+            left: $content-padding;
+            right: $content-padding;
+        }
     }
 
     &__text {
@@ -231,18 +234,27 @@ html {
     }
 
     figure {
-        &.left, &.right {
-            max-width: calc(50% - 1em);
+        @media #{$responsive-small} {
+            margin: {
+                left: -$content-padding;
+                right: -$content-padding;
+            }
         }
 
-        &.left {
-            float: left;
-            margin-right: 2em;
-        }
+        @media #{$responsive-medium-large} {
+            &.left, &.right {
+                max-width: calc(50% - 1em);
+            }
 
-        &.right {
-            float: right;
-            margin-left: 2em;
+            &.left {
+                float: left;
+                margin-right: 2em;
+            }
+
+            &.right {
+                float: right;
+                margin-left: 2em;
+            }
         }
 
         figcaption {
