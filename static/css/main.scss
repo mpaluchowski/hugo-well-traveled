@@ -222,6 +222,15 @@ html {
             float: right;
             margin-left: 2em;
         }
+
+        figcaption {
+            text-align: center;
+            @include header-font();
+
+            > * {
+                margin: 0;
+            }
+        }
     }
 }
 
