@@ -21,7 +21,7 @@
 </main>
 
 <nav class="navigator">
-    <div class="navigator__direction">
+    <div class="navigator__direction navigator__direction--previous">
     {{ with .PrevInSection }}
         <span class="navigator__direction-name">Previous</span>
         <span class="navigator__direction-link"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
@@ -30,7 +30,7 @@
         </div>
     {{ end }}
     </div>
-    <div class="navigator__direction">
+    <div class="navigator__direction navigator__direction--next">
     {{ with .NextInSection }}
         <span class="navigator__direction-name">Next</span>
         <span class="navigator__direction-link"><a href="{{ .Permalink }}">{{ .Title }}</a></span>

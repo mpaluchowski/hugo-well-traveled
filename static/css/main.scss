@@ -274,12 +274,32 @@ html {
     display: flex;
     max-width: $content-width;
     margin: 3em auto 0;
-    padding: 1em 0;
+    padding: 0 0 1em;
+
+    @media #{$responsive-small} {
+        flex-direction: column;
+    }
 
     &__direction {
         box-sizing: border-box;
-        flex: 0 1 50%;
+        margin: 1em 0 0;
         padding: 0 .6em;
+
+        @media #{$responsive-small} {
+            flex: 0 1 100%;
+
+            &--previous {
+                order: 2;
+            }
+
+            &--next {
+                order: 1;
+            }
+        }
+
+        @media #{$responsive-medium-large} {
+            flex: 0 1 50%;
+        }
 
         &-name {
             color: #555;
