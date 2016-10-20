@@ -49,11 +49,18 @@ html {
 }
 
 .section {
-    align-items: center;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     padding: 2rem;
     @include background-cover();
+
+    @media #{$responsive-small} {
+        flex-direction: column;
+    }
+
+    @media #{$responsive-medium-large} {
+        align-items: center;
+    }
 
     &__name {
         background: #FFF;
@@ -68,16 +75,26 @@ html {
 
     &__entries {
         display: flex;
-        flex: 1 1 66%;
-        flex-flow: row wrap;
+
+        @media #{$responsive-small} {
+            flex-direction: column;
+        }
+
+        @media #{$responsive-medium-large} {
+            flex: 1 1 66%;
+            flex-flow: row wrap;
+        }
     }
 
     &__entry {
         background: #FFF;
         box-sizing: border-box;
-        flex: 0 1 calc(50% - 2rem);
-        margin-left: 2rem;
         padding: 1rem 1.2rem;
+
+        @media #{$responsive-medium-large} {
+            flex: 0 1 calc(50% - 2rem);
+            margin-left: 2rem;
+        }
 
         &:first-child {
             flex: 1 1 100%;
@@ -91,9 +108,12 @@ html {
 
     &__link {
         background: #FFF;
-        margin-left: 2rem;
         margin-top: 2rem;
         padding: 1rem 1.2rem;
+
+        @media #{$responsive-medium-large} {
+            margin-left: 2rem;
+        }
 
         @include header-link();
 
