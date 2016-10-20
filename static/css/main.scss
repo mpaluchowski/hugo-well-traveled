@@ -7,7 +7,7 @@ $responsive-medium-large: "only screen and (min-width: 690px)";
 $responsive-large: "only screen and (min-width: 830px)";
 
 $content-width: 1020px;
-$content-padding: 2em;
+$content-padding: 1.2em;
 $text-width: 700px;
 
 $default-font: "PT Serif", medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -167,8 +167,8 @@ html {
     &__entries {
         margin: 3em auto 0;
         padding: {
-            left: 2rem;
-            right: 2rem;
+            left: $content-padding;
+            right: $content-padding;
         }
     }
 
