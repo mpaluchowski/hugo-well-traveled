@@ -81,6 +81,22 @@ html {
             margin-top: 2rem;
         }
     }
+
+    &__link {
+        background: #FFF;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        padding: 1rem 1.2rem;
+
+        @include header-link();
+
+        a {
+            &:after {
+                content: "...";
+            }
+        }
+
+    }
 }
 
 .entry {

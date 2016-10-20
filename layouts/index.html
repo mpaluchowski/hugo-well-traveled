@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <main>
-    {{ range .Data.Pages.GroupBy "Section" }}
+    {{ range (.Paginate (.Data.Pages.GroupBy "Section") 3).PageGroups }}
     <section class="section" id="section-{{ .Key }}" style="background-image: url(img/{{ .Key }}/header.jpg);">
         <h2 class="section__name"><a href="{{ .Key | absURL }}">{{ humanize .Key }}</a></h2>
 
@@ -15,6 +15,11 @@
                     {{ .Summary | plainify | safeHTML }}
                 </div>
             </article>
+            {{ end }}
+            {{ if $.Paginator.HasNext }}
+            <div class="section__link">
+                <a href="{{ .Key | absURL }}">See all {{ $.Paginator.TotalNumberOfElements }} stories from {{ humanize .Key }}</a>
+            </div>
             {{ end }}
         </div>
     </section>
