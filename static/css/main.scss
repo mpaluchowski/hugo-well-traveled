@@ -146,10 +146,15 @@ html {
 
     &__entries {
         margin: 3em auto 0;
-        width: $text-width;
+        padding: {
+            left: 2rem;
+            right: 2rem;
+        }
     }
 
     &__entry {
+        max-width: $text-width;
+
         & + & {
             margin-top: 2em;
         }
