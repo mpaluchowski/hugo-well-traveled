@@ -67,7 +67,7 @@ html {
     &__entry {
         background: #FFF;
         box-sizing: border-box;
-        flex: 0 1 50%;
+        flex: 0 1 calc(50% - 2rem);
         margin-left: 2rem;
         padding: 1rem 1.2rem;
 
