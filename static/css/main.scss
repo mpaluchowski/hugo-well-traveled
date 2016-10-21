@@ -189,14 +189,27 @@ html {
     &__header {
         align-items: center;
         display: flex;
-        height: 300px;
+        flex-direction: column;
         justify-content: center;
         @include background-cover();
+
+        &--image {
+            height: 300px;
+        }
+    }
+
+    &__description {
+        background: #FFF;
+        color: #555;
+        flex: 0 0 auto;
+        margin-top: 1.4rem;
+        text-align: center;
     }
 
     &__title {
         background: #FFF;
         font-size: 3rem;
+        margin: 0;
         padding: .4em .6em;
 
         @include header-font();

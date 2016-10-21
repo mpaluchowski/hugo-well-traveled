@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+<main class="list">
+    <header class="list__header">
+        <div class="list__description">Stories about</div>
+        <h1 class="list__title">{{ humanize .Title }}</h1>
+    </header>
+
+    <div class="list__entries">
+        {{ range .Data.Pages }}
+        <article class="list__entry entry">
+            <h2 class="entry__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <time class="entry__timestamp" datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006 15:04 MST" }}</time>
+
+            <div class="entry__summary text">
+                {{ .Summary | plainify | safeHTML }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</main>
+
+{{ partial "footer.html" . }}
