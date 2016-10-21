@@ -17,6 +17,17 @@
                 {{ .Content }}
             </section>
         </div>
+
+        <footer class="article__footer">
+            {{ with .Params.tags}}
+            <nav class="article__tags">
+                Topics:
+                <ul class="tags">
+                    {{ range . }}<li class="tags__tag"><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+                </ul>
+            </nav>
+            {{ end }}
+        </footer>
     </article>
 </main>
 

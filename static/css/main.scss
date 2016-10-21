@@ -267,6 +267,11 @@ html {
         margin: 3em auto 0;
         max-width: $content-width;
     }
+
+    &__footer {
+        max-width: $text-width;
+        margin: 3em auto 0;
+    }
 }
 
 .text {
@@ -321,6 +326,26 @@ html {
             > * {
                 margin: 0;
             }
+        }
+    }
+}
+
+.tags {
+    display: inline;
+    list-style: none;
+    padding: 0;
+
+    &__tag {
+        display: inline;
+
+        & + & {
+            &:before {
+                content: ", ";
+            }
+        }
+
+        a {
+            @include text-link();
         }
     }
 }
