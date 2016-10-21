@@ -29,6 +29,16 @@ $link-color: #0027b7;
     }
 }
 
+@mixin text-link() {
+    border-bottom: 1px solid lighten($link-color, 50%);
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: #555;
+    }
+}
+
 @mixin background-cover() {
     background: {
         position: center center;
@@ -273,13 +283,7 @@ html {
     }
 
     a {
-        border-bottom: 1px solid lighten($link-color, 50%);
-        color: $link-color;
-        text-decoration: none;
-
-        &:hover {
-            color: #555;
-        }
+        @include text-link();
     }
 
     img {
