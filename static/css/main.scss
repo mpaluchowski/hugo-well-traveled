@@ -203,7 +203,7 @@ html {
     }
 
     &__entries {
-        margin: 3em auto 0;
+        margin: 3em 0 0;
         padding: {
             left: $content-padding;
             right: $content-padding;
@@ -211,6 +211,7 @@ html {
     }
 
     &__entry {
+        margin: 0 auto;
         max-width: $text-width;
 
         & + & {
