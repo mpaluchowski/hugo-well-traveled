@@ -73,12 +73,15 @@ html {
     &__name {
         background: #FFF;
         box-sizing: border-box;
-        flex: 1 1 34%;
         font-size: 4rem;
         padding: .4em .6em;
 
         @media #{$responsive-medium} {
             margin: 0;
+        }
+
+        @media #{$responsive-medium-large} {
+            flex: 1 1 34%;
         }
 
         @include header-font();
