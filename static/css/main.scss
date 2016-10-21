@@ -2,14 +2,17 @@
 
 // Responsive Media Queries
 $responsive-small: "only screen and (max-width: 689px)";
-$responsive-medium: "only screen and (min-width: 690px) and (max-width: 829px)";
-$responsive-medium-large: "only screen and (min-width: 690px)";
-$responsive-large: "only screen and (min-width: 830px)";
+$responsive-small-medium: "only screen and (max-width: 1020px)";
+$responsive-medium: "only screen and (min-width: 689px) and (max-width: 1020px)";
+$responsive-medium-large: "only screen and (min-width: 689px)";
+$responsive-large: "only screen and (min-width: 1020px)";
 
+// Common content sizing
 $content-width: 1020px;
 $content-padding: 1.2em;
 $text-width: 700px;
 
+// Fonts
 $default-font: "PT Serif", medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 $header-font: "Fira Sans", Helvetica, Arial, sans-serif;
 
@@ -59,8 +62,12 @@ html {
     }
 
     @media #{$responsive-medium-large} {
-        align-items: center;
         padding: 2rem;
+        align-items: flex-start;
+    }
+
+    @media #{$responsive-large} {
+        align-items: center;
     }
 
     &__name {
@@ -70,6 +77,10 @@ html {
         font-size: 4rem;
         padding: .4em .6em;
 
+        @media #{$responsive-medium} {
+            margin: 0;
+        }
+
         @include header-font();
         @include header-link();
     }
@@ -77,12 +88,15 @@ html {
     &__entries {
         display: flex;
 
-        @media #{$responsive-small} {
+        @media #{$responsive-small-medium} {
             flex-direction: column;
         }
 
         @media #{$responsive-medium-large} {
             flex: 1 1 66%;
+        }
+
+        @media #{$responsive-large} {
             flex-flow: row wrap;
         }
     }
@@ -93,8 +107,11 @@ html {
         padding: 1rem 1.2rem;
 
         @media #{$responsive-medium-large} {
-            flex: 0 1 calc(50% - 2rem);
             margin-left: 2rem;
+        }
+
+        @media #{$responsive-large} {
+            flex: 0 1 calc(50% - 2rem);
         }
 
         &:first-child {
@@ -267,7 +284,7 @@ html {
     }
 
     figure {
-        @media #{$responsive-small} {
+        @media #{$responsive-small-medium} {
             margin: {
                 left: -$content-padding;
                 right: -$content-padding;
