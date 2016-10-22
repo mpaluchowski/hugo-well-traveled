@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <base href="{{ .Site.BaseURL }}">
 
-    <title>{{ if and .IsNode (ne .IsHome true) }}{{ humanize .Title | singularize }}{{ else }}{{ .Title }}{{ end }}{{ if eq .IsHome false }} - {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if ne .IsNode .IsHome }}{{ humanize .Title | singularize }}{{ else }}{{ .Title }}{{ end }}{{ if eq .IsHome false }} - {{ .Site.Title }}{{ end }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ .Hugo.Generator }}
