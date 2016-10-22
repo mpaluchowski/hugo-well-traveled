@@ -10,6 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ .Hugo.Generator }}
 
+    <meta name="description" content="{{ partial "description.html" . }}">
+
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ if ne .IsNode .IsHome }}{{ humanize .Title | singularize }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ partial "description.html" . }}">
+    {{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+
     <link rel="canonical" href="{{ .Permalink }}">
     {{ with .RSSLink }}<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ . }}">{{ end }}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:500|PT+Serif:400,400i,700,700i&amp;subset=latin-ext">

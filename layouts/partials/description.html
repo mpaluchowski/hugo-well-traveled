@@ -1,0 +1,7 @@
+{{- if ne .IsNode .IsHome -}}
+    Stories about {{ if ne .IsNode .IsHome }}{{ humanize .Title | singularize }}{{ else }}{{ .Title }}{{ end }}
+{{- else if .IsHome -}}
+    {{ .Site.Params.description }}
+{{- else -}}
+    {{trim (.Summary | plainify) "\n" }}
+{{- end -}}
