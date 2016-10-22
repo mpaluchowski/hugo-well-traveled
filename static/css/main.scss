@@ -270,7 +270,8 @@ html {
         padding: .6em .8em;
     }
 
-    &__content {
+    &__text, &__footer {
+        margin: 3em auto 0;
         padding: {
             left: $content-padding;
             right: $content-padding;
@@ -278,13 +279,11 @@ html {
     }
 
     &__text {
-        margin: 3em auto 0;
         max-width: $content-width;
     }
 
     &__footer {
         max-width: $text-width;
-        margin: 3em auto 0;
     }
 }
 

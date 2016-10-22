@@ -12,11 +12,9 @@
             </div>
         </header>
 
-        <div class="article__content">
-            <section class="article__text text">
-                {{ .Content }}
-            </section>
-        </div>
+        <section class="article__text text">
+            {{ .Content }}
+        </section>
 
         <footer class="article__footer">
             {{ with .Params.tags}}
