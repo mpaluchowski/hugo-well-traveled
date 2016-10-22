@@ -335,10 +335,15 @@ html {
         }
 
         figcaption {
+            color: #555;
+            font-family: $default-font;
             text-align: center;
-            @include header-font();
 
             > * {
+                font: {
+                    size: .8em;
+                    weight: normal;
+                }
                 margin: 0;
             }
         }
