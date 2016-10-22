@@ -297,7 +297,8 @@ html {
         margin-right: auto;
     }
 
-    p {
+    p, ul, ol {
+        box-sizing: border-box;
         max-width: $text-width;
     }
 
