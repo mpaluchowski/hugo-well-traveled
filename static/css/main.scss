@@ -17,6 +17,7 @@ $default-font: "PT Serif", medium-content-serif-font, Georgia, Cambria, "Times N
 $header-font: "Fira Sans", Helvetica, Arial, sans-serif;
 
 $link-color: #0027b7;
+$secondary-color: #555;
 
 @mixin header-link() {
     a {
@@ -35,7 +36,7 @@ $link-color: #0027b7;
     text-decoration: none;
 
     &:hover {
-        color: #555;
+        color: $secondary-color;
     }
 }
 
@@ -175,7 +176,7 @@ html {
     }
 
     &__timestamp {
-        color: #555;
+        color: $secondary-color;
         display: block;
         margin-top: .4em;
     }
@@ -200,7 +201,7 @@ html {
 
     &__description {
         background: #FFF;
-        color: #555;
+        color: $secondary-color;
         flex: 0 0 auto;
         margin-top: 1.4rem;
         text-align: center;
@@ -266,7 +267,7 @@ html {
     }
 
     &__stats {
-        color: #555;
+        color: $secondary-color;
         padding: .6em .8em;
     }
 
@@ -341,7 +342,7 @@ html {
         }
 
         figcaption {
-            color: #555;
+            color: $secondary-color;
             font-family: $default-font;
             text-align: center;
 
@@ -377,7 +378,7 @@ html {
 }
 
 .navigator {
-    border-top: 1px solid #555;
+    border-top: 1px solid $secondary-color;
     box-sizing: border-box;
     display: flex;
     max-width: $content-width;
@@ -410,7 +411,7 @@ html {
         }
 
         &-name {
-            color: #555;
+            color: $secondary-color;
             display: block;
             font: {
                 size: .8rem;
