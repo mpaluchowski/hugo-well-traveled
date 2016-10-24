@@ -1,6 +1,6 @@
-name = "Well Travelled"
+name = "Well Traveled"
 license = "MIT"
-licenselink = "https://github.com/mpaluchowski/hugo-well-travelled/blob/master/LICENSE"
+licenselink = "https://github.com/mpaluchowski/hugo-well-traveled/blob/master/LICENSE"
 description = ""
 homepage = "http://travel.paluchowski.com/"
 tags = ["blog"]
