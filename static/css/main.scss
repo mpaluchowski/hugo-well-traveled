@@ -63,6 +63,7 @@ html {
 }
 
 .section {
+    box-sizing: border-box;
     display: flex;
     min-height: 100vh;
     @include background-cover();
@@ -245,6 +246,7 @@ html {
         @include background-cover();
 
         &--image {
+            box-sizing: border-box;
             height: 100vh;
         }
     }
