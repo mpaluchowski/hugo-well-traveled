@@ -63,23 +63,28 @@ html {
 }
 
 .section {
-    box-sizing: border-box;
-    display: flex;
-    min-height: 100vh;
     @include background-cover();
 
-    @media #{$responsive-small} {
-        flex-direction: column;
-        padding: $content-padding;
-    }
+    &__content {
+        box-sizing: border-box;
+        display: flex;
+        margin: 0 auto;
+        max-width: 1400px;
+        min-height: 100vh;
 
-    @media #{$responsive-medium-large} {
-        padding: 2rem;
-        align-items: flex-start;
-    }
+        @media #{$responsive-small} {
+            flex-direction: column;
+            padding: $content-padding;
+        }
 
-    @media #{$responsive-large} {
-        align-items: center;
+        @media #{$responsive-medium-large} {
+            padding: 2rem;
+            align-items: flex-start;
+        }
+
+        @media #{$responsive-large} {
+            align-items: center;
+        }
     }
 
     &__name {

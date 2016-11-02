@@ -3,24 +3,26 @@
 <main>
     {{ range .Data.Pages.GroupBy "Section" }}
     <section class="section" id="section-{{ .Key }}" style="background-image: url(img/{{ .Key }}/header.jpg);">
-        <h2 class="section__name"><a href="{{ .Key | absURL }}">{{ humanize .Key }}</a></h2>
+        <div class="section__content">
+            <h2 class="section__name"><a href="{{ .Key | absURL }}">{{ humanize .Key }}</a></h2>
 
-        <div class="section__entries">
-            {{ range first 3 .Pages }}
-            <article class="section__entry entry">
-                <h3 class="entry__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                <time class="entry__timestamp" datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006 15:04" }} {{ if isset .Params "timezone" }}{{ .Params.timezone }}{{ else }}{{ .Date.Format "MST" }}{{ end }}</time>
+            <div class="section__entries">
+                {{ range first 3 .Pages }}
+                <article class="section__entry entry">
+                    <h3 class="entry__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    <time class="entry__timestamp" datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006 15:04" }} {{ if isset .Params "timezone" }}{{ .Params.timezone }}{{ else }}{{ .Date.Format "MST" }}{{ end }}</time>
 
-                <div class="entry__summary text">
-                    {{ .Summary | plainify | safeHTML }}
+                    <div class="entry__summary text">
+                        {{ .Summary | plainify | safeHTML }}
+                    </div>
+                </article>
+                {{ end }}
+                {{ if gt (len .Pages) 3 }}
+                <div class="section__link">
+                    <a href="{{ .Key | absURL }}">See all {{ len .Pages }} stories from {{ humanize .Key }}</a>
                 </div>
-            </article>
-            {{ end }}
-            {{ if gt (len .Pages) 3 }}
-            <div class="section__link">
-                <a href="{{ .Key | absURL }}">See all {{ len .Pages }} stories from {{ humanize .Key }}</a>
+                {{ end }}
             </div>
-            {{ end }}
         </div>
     </section>
     {{ end }}
