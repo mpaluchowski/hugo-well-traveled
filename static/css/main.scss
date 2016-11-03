@@ -509,3 +509,32 @@ html {
         text-align: center;
     }
 }
+
+.jumbotron {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--image {
+        min-height: 100vh;
+
+        @include background-cover();
+    }
+
+    &__title {
+        background: #FFF;
+        box-sizing: border-box;
+        font-size: 3em;
+        padding: .4em .6em;
+        @include header-font();
+    }
+
+    &__text {
+        background: #FFF;
+        flex: 0 0 auto;
+        max-width: $text-width;
+        padding: 1rem 1.2rem;
+    }
+}
