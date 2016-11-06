@@ -3,5 +3,5 @@
 {{- else if .IsHome -}}
     {{ .Site.Params.description }}
 {{- else -}}
-    {{trim (.Summary | plainify) "\n" }}
+    {{ trim (.Summary | plainify) "\n" }}
 {{- end -}}
