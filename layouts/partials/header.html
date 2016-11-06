@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <base href="{{ .Site.BaseURL }}">
 
-    <title>{{ if ne .IsNode .IsHome }}{{ humanize .Title | singularize }}{{ else }}{{ .Title }}{{ end }}{{ if eq .IsHome false }} - {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if ne .IsNode .IsHome }}{{ .Title | humanize | singularize }}{{ else }}{{ .Title }}{{ end }}{{ if eq .IsHome false }} - {{ .Site.Title }}{{ end }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ .Hugo.Generator }}
@@ -14,7 +14,7 @@
 
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ if ne .IsNode .IsHome }}{{ humanize .Title | singularize }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:title" content="{{ if ne .IsNode .IsHome }}{{ .Title | humanize | singularize }}{{ else }}{{ .Title }}{{ end }}">
     <meta property="og:description" content="{{ partial "description.html" . }}">
     {{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 
