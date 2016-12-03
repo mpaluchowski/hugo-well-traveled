@@ -4,7 +4,7 @@ licenselink = "https://github.com/mpaluchowski/hugo-well-traveled/blob/master/LI
 description = ""
 homepage = "https://travel.paluchowski.com/"
 tags = ["blog", "responsive", "minimal"]
-min_version = 0.17
+min_version = 0.18
 
 [author]
   name = "Michał Paluchowski"
