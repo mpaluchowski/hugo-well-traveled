@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <main>
-    {{ range (where .Site.AllPages "Kind" "section").Reverse }}
+    {{ range (where .Site.Pages "Kind" "section").Reverse }}
     <section class="section" id="section-{{ .Title | plainify | urlize }}"{{ with .Params.image }} style="background-image: url({{ . }});"{{ end }}>
         <div class="section__content">
             <h2 class="section__name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
