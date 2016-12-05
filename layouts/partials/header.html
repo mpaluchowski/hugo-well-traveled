@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="{{ .Site.BaseURL }}">
 
     <title>{{ if ne .IsNode .IsHome }}{{ .Title | humanize | singularize }}{{ else }}{{ .Title }}{{ end }}{{ if eq .IsHome false }} - {{ .Site.Title }}{{ end }}</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ .Hugo.Generator }}
 
     <meta name="description" content="{{ partial "description.html" . }}">
