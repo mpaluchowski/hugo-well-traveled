@@ -316,7 +316,14 @@ html {
         margin-right: auto;
     }
 
-    p, ul, ol {
+    h2, h3 {
+        margin: {
+            top: 1.2em;
+            bottom: .4em;
+        }
+    }
+
+    p, ul, ol, h2, h3 {
         box-sizing: border-box;
         max-width: $text-width;
     }
