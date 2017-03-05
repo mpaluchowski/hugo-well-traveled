@@ -328,6 +328,18 @@ html {
         max-width: $text-width;
     }
 
+    hr {
+        border: 0;
+        border-top: 1px solid $secondary-color;
+        height: 1px;
+        margin: {
+            top: 2em;
+            bottom: 2em;
+        }
+        max-width: $text-width / 2;
+        width: 50%;
+    }
+
     a {
         @include text-link();
     }
