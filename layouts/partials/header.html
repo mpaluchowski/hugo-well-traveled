@@ -31,7 +31,7 @@
 <header class="header">
     <nav class="header__links">
         {{ if .IsHome }}<h1{{ else }}<div{{ end }} class="header__link header__title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>{{ if .IsHome }}</h1{{ else }}</div{{ end }}>
-        {{ if .IsPage }}
+        {{- if .IsPage -}}
         <div class="header__link"><a href="{{ .Section | absURL }}">{{ humanize .Section }}</a></div>
         {{ end }}
     </nav>
