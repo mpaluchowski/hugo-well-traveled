@@ -478,8 +478,6 @@ html {
 }
 
 .header {
-    padding: .8rem 0;
-
     a {
         color: inherit;
         text-decoration: none;
@@ -489,12 +487,20 @@ html {
         }
     }
 
+    &__logo {
+        height: 3rem;
+        margin-right: .3rem;
+        margin-top: .2rem;
+        vertical-align: top;
+    }
+
     &__links {
         text-align: center;
     }
 
     &__link {
         font-size: 1.6rem;
+        margin: .8rem 0;
 
         @media #{$responsive-medium-large} {
             display: inline-block;
@@ -515,7 +521,6 @@ html {
             size: 1.6rem;
             weight: 500;
         }
-        margin: 0;
     }
 }
 
