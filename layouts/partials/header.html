@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:500|PT+Serif:400,400i,700,700i&amp;subset=latin-ext">
     <link rel="stylesheet" href="css/main.css">
 
+    {{ with .Site.Params.favicon -}}
+    <link rel="icon" href="{{ .image }}" type="{{ .type }}">
+    <link rel="apple-touch-icon" href="{{ .image }}">
+    {{- end }}
+
     {{ template "_internal/google_analytics_async.html" . }}
 </head>
 
