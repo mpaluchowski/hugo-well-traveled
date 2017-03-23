@@ -187,9 +187,8 @@ html {
         @include header-link();
     }
 
-    &__timestamp {
+    &__placement {
         color: $secondary-color;
-        display: block;
         margin-top: .4em;
     }
 
@@ -262,7 +261,7 @@ html {
         }
     }
 
-    &__title, &__timestamp, &__stats {
+    &__title, &__placement, &__stats {
         background: #FFF;
         flex: 0 0 auto;
         text-align: center;
@@ -275,7 +274,7 @@ html {
         @include header-font();
     }
 
-    &__timestamp {
+    &__placement {
         padding: .6em .8em;
     }
 
