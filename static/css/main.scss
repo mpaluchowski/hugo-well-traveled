@@ -323,7 +323,7 @@ html {
         }
     }
 
-    p, ul, ol, h2, h3 {
+    p, ul, ol, h2, h3, blockquote {
         box-sizing: border-box;
         max-width: $text-width;
     }
@@ -391,6 +391,30 @@ html {
                     weight: normal;
                 }
                 margin: 0;
+            }
+        }
+    }
+
+    blockquote {
+        overflow: hidden;
+        padding-left: 4.2em;
+        position: relative;
+
+        &:before {
+            color: lighten($secondary-color, 30%);
+            content: "\201C";
+            display: block;
+            font-size: 8em;
+            left: 0;
+            position: absolute;
+            top: -.2em;
+        }
+
+        cite {
+            font-size: .85em;
+
+            &:before {
+                content: "\2014  ";
             }
         }
     }
