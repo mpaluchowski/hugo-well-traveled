@@ -55,6 +55,32 @@ $secondary-color: #555;
     }
 }
 
+@mixin side-floated-content() {
+    @media #{$responsive-medium} {
+        &.left, &.right {
+            max-width: calc(50% - 1em + #{$content-padding});
+        }
+    }
+
+    @media #{$responsive-medium-large} {
+        &.left {
+            float: left;
+            margin-right: 2em;
+        }
+
+        &.right {
+            float: right;
+            margin-left: 2em;
+        }
+    }
+
+    @media #{$responsive-large} {
+        &.left, &.right {
+            max-width: calc(50% - 1em);
+        }
+    }
+}
+
 html {
     font: {
         family: $default-font;
@@ -357,29 +383,7 @@ html {
             }
         }
 
-        @media #{$responsive-medium} {
-            &.left, &.right {
-                max-width: calc(50% - 1em + #{$content-padding});
-            }
-        }
-
-        @media #{$responsive-medium-large} {
-            &.left {
-                float: left;
-                margin-right: 2em;
-            }
-
-            &.right {
-                float: right;
-                margin-left: 2em;
-            }
-        }
-
-        @media #{$responsive-large} {
-            &.left, &.right {
-                max-width: calc(50% - 1em);
-            }
-        }
+        @include side-floated-content();
 
         figcaption {
             color: $secondary-color;
@@ -417,6 +421,14 @@ html {
                 content: "\2014  ";
             }
         }
+    }
+
+    .spotify-playlist {
+        @media #{$responsive-small-medium} {
+            text-align: center;
+        }
+
+        @include side-floated-content();
     }
 }
 

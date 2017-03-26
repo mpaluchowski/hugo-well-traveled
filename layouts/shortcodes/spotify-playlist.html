@@ -1,0 +1,3 @@
+<div{{ if .Get "class" }} class="{{ .Get "class" }}"{{ end }}>
+    <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3A{{ .Get "user" }}%3Aplaylist%3A{{ .Get "playlist" }}" width="{{ if .Get "width" }}{{ .Get "width" }}{{ else }}300{{ end }}" height="{{ if .Get "height" }}{{ .Get "height" }}{{ else }}380{{ end }}" frameborder="0" allowtransparency="true"></iframe>
+</div>
