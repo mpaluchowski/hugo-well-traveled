@@ -41,7 +41,7 @@
             {{- end -}}
             <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
         {{ if .IsHome }}</h1{{ else }}</div{{ end }}>
-        {{- if .IsPage -}}
+        {{- if and .IsPage (ne .Section "") -}}
         <div class="header__link"><a href="{{ .Section | absURL }}">{{ humanize .Section }}</a></div>
         {{ end }}
     </nav>
