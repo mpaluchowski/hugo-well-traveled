@@ -11,6 +11,7 @@ $responsive-large: "only screen and (min-width: 1020px)";
 $content-width: 1020px;
 $content-padding: 1.2em;
 $text-width: 700px;
+$line-height: 1.428;
 
 // Fonts
 $default-font: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -216,6 +217,7 @@ html {
     &__placement {
         color: $secondary-color;
         font-size: .9em;
+        line-height: $line-height;
         margin-top: .5em;
     }
 
@@ -302,6 +304,7 @@ html {
     }
 
     &__placement {
+        line-height: $line-height;
         padding: .6em .8em;
     }
 
@@ -328,7 +331,7 @@ html {
 }
 
 .text {
-    line-height: 1.428;
+    line-height: $line-height;
 
     &:after {
         clear: both;
