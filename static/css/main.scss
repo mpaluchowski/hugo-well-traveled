@@ -569,8 +569,32 @@ html {
     }
 }
 
+.pages-nav {
+    &__link {
+        & + & {
+            margin-left: 2em;
+
+            &:before {
+                content: "/";
+                margin-left: -1.16em;
+                position: absolute;
+            }
+        }
+
+        a {
+            @include text-link();
+        }
+    }
+}
+
 .footer {
     margin: 3em 2em 2em;
+
+    &__pages-nav {
+        text-align: center;
+        font-size: .9rem;
+        margin-bottom: 3em;
+    }
 
     &__copyright {
         font-size: .8rem;
