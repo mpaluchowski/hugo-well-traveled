@@ -418,6 +418,36 @@ html {
             }
         }
     }
+
+    .spotify-playlist {
+        @media #{$responsive-small-medium} {
+            text-align: center;
+        }
+
+        @media #{$responsive-medium} {
+            &.left, &.right {
+                max-width: calc(50% - 1em + #{$content-padding});
+            }
+        }
+
+        @media #{$responsive-medium-large} {
+            &.left {
+                float: left;
+                margin-right: 2em;
+            }
+
+            &.right {
+                float: right;
+                margin-left: 2em;
+            }
+        }
+
+        @media #{$responsive-large} {
+            &.left, &.right {
+                max-width: calc(50% - 1em);
+            }
+        }
+    }
 }
 
 .tags {
