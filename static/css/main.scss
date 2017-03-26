@@ -365,7 +365,14 @@ html {
             top: 2em;
             bottom: 2em;
         }
-        max-width: $text-width / 2;
+
+        @media #{$responsive-small-medium} {
+            max-width: 50%;
+        }
+
+        @media #{$responsive-large} {
+            max-width: $text-width / 2;
+        }
     }
 
     a {
