@@ -1,5 +1,9 @@
 <footer class="footer">
     <nav class="footer__pages-nav pages-nav">
+        <span class="pages-nav__link"><a href="{{ .Site.BaseURL }}">Home</a></span>
+    {{- if and .IsPage (ne .Section "") -}}
+        <span class="pages-nav__link"><a href="{{ .Section | absURL }}">{{ humanize .Section }}</a></span>
+    {{ end }}
     {{- range (where (where .Site.Pages "Section" "") "Kind" "page") -}}
         <span class="pages-nav__link"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
     {{- end -}}
