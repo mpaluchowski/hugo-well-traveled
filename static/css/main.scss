@@ -332,6 +332,10 @@ body {
     &__footer {
         max-width: $text-width;
     }
+
+    &__tags {
+        line-height: $line-height;
+    }
 }
 
 .text {
@@ -603,9 +607,10 @@ body {
     margin: 3em 2em 2em;
 
     &__pages-nav {
-        text-align: center;
         font-size: .9rem;
+        line-height: 2;
         margin-bottom: 3em;
+        text-align: center;
     }
 
     &__copyright {
