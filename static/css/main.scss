@@ -484,6 +484,7 @@ body {
     }
 
     &__intro {
+        box-sizing: border-box;
         flex: 0 0 100%;
         font-size: .9rem;
         line-height: $line-height;
