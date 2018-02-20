@@ -1,5 +1,6 @@
 ---
-draft: true
+date: {{ .Date }}
+title: "{{ replace .Name "-" " " | title }}"
 timezone: ""
 location: ""
 tags:
