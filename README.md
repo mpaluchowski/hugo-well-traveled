@@ -1,6 +1,6 @@
 # Well Traveled Hugo Theme
 
-Well Traveled is a minimal theme for Hugo---the static website generator. Originally built for use at http://travel.paluchowski.com/, my travel blog.
+Well Traveled is a minimal theme for Hugo---the static website generator. Originally built for use at https://travel.paluchowski.com/, my travel blog.
 
 Its focus is mainly on:
 
@@ -17,7 +17,7 @@ $ cd /your/hugo/site
 $ git clone https://github.com/mpaluchowski/hugo-well-traveled themes/well-traveled
 ```
 
-Build the [SASS](http://sass-lang.com/) files from `/assets/css` into `/static/css`:
+Build the [SASS](https://sass-lang.com/) files from `/assets/css` into `/static/css`:
 
 ```shell
 $ sass --no-source-map --style=compressed --update assets:assets
@@ -45,7 +45,7 @@ languageCode: "en-us"
 # Google Analytics ID
 googleAnalytics: UA-2971180-12
 # Copyright statement used in the footer
-copyright: 'Made around the world by <a href="https://michal.paluchowski.com/">Michał Paluchowski</a>. All content is under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.'
+copyright: 'Made around the world by <a href="https://michal.paluchowski.com/">Michał Paluchowski</a>. All content is under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.'
 params:
   # Description used in the main page's META tag
   description: 'Stories from extended travels, endeavored by Milena & Michał Paluchowski. Highly opinionated. Mildly biased. A mixture of intersecting thoughts from our hearts and minds.'
