@@ -9,6 +9,12 @@
     <title>{{ .Title }}{{ if eq .IsHome false }} - {{ .Site.Title }}{{ end }}</title>
 
     {{ .Hugo.Generator }}
+    {{ $indexedPages := slice "page" "home" -}}
+    {{ if in $indexedPages .Kind -}}
+    <meta name="robots" content="index,follow">
+    {{- else -}}
+    <meta name="robots" content="noindex,follow">
+    {{- end }}
 
     <meta name="description" content="{{ partial "description.html" . }}">
 
