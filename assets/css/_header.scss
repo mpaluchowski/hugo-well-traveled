@@ -1,0 +1,45 @@
+.header {
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: $link-color;
+        }
+    }
+
+    &__logo {
+        height: 3rem;
+        margin: -.6rem .3rem -.6rem 0;
+        vertical-align: top;
+    }
+
+    &__links {
+        text-align: center;
+    }
+
+    &__link {
+        font-size: 1.6rem;
+        margin: .8rem 0;
+
+        @media #{$responsive-medium-large} {
+            display: inline-block;
+
+            & + & {
+                padding-left: .8rem;
+
+                &:before {
+                    content: ":";
+                    padding-right: .8rem;
+                }
+            }
+        }
+    }
+
+    &__title {
+        font: {
+            size: 1.6rem;
+            weight: 500;
+        }
+    }
+}

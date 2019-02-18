@@ -1,0 +1,21 @@
+.entry {
+
+    &__title {
+        font-size: 1.8em;
+        margin: 0;
+
+        @include header-font();
+        @include header-link();
+    }
+
+    &__placement {
+        color: $secondary-color;
+        font-size: .9em;
+        line-height: $line-height;
+        margin-top: .5em;
+    }
+
+    &__summary {
+        margin-top: 1em;
+    }
+}
