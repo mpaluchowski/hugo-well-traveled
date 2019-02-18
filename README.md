@@ -20,7 +20,7 @@ $ git clone https://github.com/mpaluchowski/hugo-well-traveled themes/well-trave
 Build the [SASS](http://sass-lang.com/) files from `/assets/css` into `/static/css`:
 
 ```shell
-$ sass --no-source-map --style=compressed --update assets:static
+$ sass --no-source-map --style=compressed --update assets:assets
 ```
 
 Then tell Hugo to render your site with the theme:
