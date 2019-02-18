@@ -1,0 +1,111 @@
+.text {
+    line-height: $line-height;
+
+    &:after {
+        clear: both;
+        content: " ";
+        display: block;
+        height: 0;
+    }
+
+    > * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2, h3 {
+        margin: {
+            top: 1.2em;
+            bottom: .4em;
+        }
+    }
+
+    p, ul, ol, h2, h3, blockquote {
+        box-sizing: border-box;
+        max-width: $text-width;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid $secondary-color;
+        height: 1px;
+        margin: {
+            top: 2em;
+            bottom: 2em;
+        }
+
+        @media #{$responsive-small-medium} {
+            max-width: 50%;
+        }
+
+        @media #{$responsive-large} {
+            max-width: $text-width / 2;
+        }
+    }
+
+    a {
+        @include text-link();
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    figure {
+        text-align: center;
+
+        @media #{$responsive-small-medium} {
+            margin: {
+                left: -$content-padding;
+                right: -$content-padding;
+            }
+        }
+
+        @include side-floated-content();
+
+        figcaption {
+            color: $secondary-color;
+            font-family: $default-font;
+
+            > * {
+                font: {
+                    size: .8em;
+                    weight: normal;
+                }
+                margin: 0;
+            }
+        }
+    }
+
+    blockquote {
+        overflow: hidden;
+        padding-left: 4.2em;
+        position: relative;
+
+        &:before {
+            color: lighten($secondary-color, 30%);
+            content: "\201C";
+            display: block;
+            font-size: 8em;
+            left: 0;
+            position: absolute;
+            top: -.2em;
+        }
+
+        cite {
+            font-size: .85em;
+
+            &:before {
+                content: "\2014  ";
+            }
+        }
+    }
+
+    .spotify-playlist {
+        @media #{$responsive-small-medium} {
+            text-align: center;
+        }
+
+        @include side-floated-content();
+    }
+}

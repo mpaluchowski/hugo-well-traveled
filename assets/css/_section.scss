@@ -1,0 +1,114 @@
+.section {
+    @include background-cover();
+
+    &__content {
+        box-sizing: border-box;
+        display: flex;
+        margin: 0 auto;
+        max-width: 1400px;
+        min-height: 100vh;
+
+        @media #{$responsive-small} {
+            flex-direction: column;
+            padding: $content-padding;
+        }
+
+        @media #{$responsive-medium-large} {
+            padding: 2rem;
+            align-items: flex-start;
+        }
+
+        @media #{$responsive-large} {
+            align-items: center;
+        }
+    }
+
+    &__name {
+        background: #FFF;
+        box-sizing: border-box;
+        padding: .4em .6em;
+
+        @media #{$responsive-small} {
+            font-size: 2.6rem;
+        }
+
+        @media #{$responsive-medium} {
+            flex: 1 1 34%;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        @media #{$responsive-large} {
+            flex: 1 1 34%;
+            font-size: 4rem;
+        }
+
+        @include header-font();
+        @include header-link();
+    }
+
+    &__entries {
+        display: flex;
+
+        @media #{$responsive-small-medium} {
+            flex-direction: column;
+        }
+
+        @media #{$responsive-medium-large} {
+            flex: 1 1 66%;
+        }
+
+        @media #{$responsive-large} {
+            flex-flow: row wrap;
+        }
+    }
+
+    &__entry {
+        background: #FFF;
+        box-sizing: border-box;
+        padding: 1rem 1.2rem;
+
+        @media #{$responsive-medium-large} {
+            margin-left: 2rem;
+        }
+
+        @media #{$responsive-large} {
+            flex: 0 1 calc(50% - 2rem);
+        }
+
+        &:first-child {
+            flex: 1 1 100%;
+        }
+
+        &:nth-child(n + 2) {
+            font-size: .8rem;
+
+            @media #{$responsive-small} {
+                margin-top: $content-padding;
+            }
+
+            @media #{$responsive-medium-large} {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    &__link {
+        background: #FFF;
+        margin-top: 2rem;
+        padding: 1rem 1.2rem;
+
+        @media #{$responsive-medium-large} {
+            margin-left: 2rem;
+        }
+
+        @include header-link();
+
+        a {
+            &:after {
+                content: "...";
+            }
+        }
+
+    }
+}

@@ -1,0 +1,17 @@
+// Responsive Media Queries
+$responsive-small: "only screen and (max-width: 689px)";
+$responsive-small-medium: "only screen and (max-width: 1019px)";
+$responsive-medium: "only screen and (min-width: 690px) and (max-width: 1019px)";
+$responsive-medium-large: "only screen and (min-width: 690px)";
+$responsive-large: "only screen and (min-width: 1020px)"; // Common content sizing
+
+$content-width: 1020px;
+$content-padding: 1.2em;
+$text-width: 700px;
+$line-height: 1.428; // Fonts
+
+$default-font: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+$header-font: "Fira Sans", Helvetica, Arial, sans-serif;
+
+$link-color: #0027b7;
+$secondary-color: #555;

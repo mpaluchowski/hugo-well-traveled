@@ -1,0 +1,17 @@
+.pages-nav {
+    &__link {
+        & + & {
+            margin-left: 2em;
+
+            &:before {
+                content: "/";
+                margin-left: -1.16em;
+                position: absolute;
+            }
+        }
+
+        a {
+            @include text-link();
+        }
+    }
+}

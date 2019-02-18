@@ -1,0 +1,47 @@
+.list {
+    &__header {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include background-cover();
+
+        &--image {
+            height: 300px;
+        }
+    }
+
+    &__description {
+        background: #FFF;
+        color: $secondary-color;
+        flex: 0 0 auto;
+        margin-top: 1.4rem;
+        text-align: center;
+    }
+
+    &__title {
+        background: #FFF;
+        font-size: 3rem;
+        margin: 0;
+        padding: .4em .6em;
+
+        @include header-font();
+    }
+
+    &__entries {
+        margin: 3em 0 0;
+        padding: {
+            left: $content-padding;
+            right: $content-padding;
+        }
+    }
+
+    &__entry {
+        margin: 0 auto;
+        max-width: $text-width;
+
+        & + & {
+            margin-top: 2em;
+        }
+    }
+}
