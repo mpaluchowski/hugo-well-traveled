@@ -22,7 +22,8 @@
     {{ with .RSSLink }}<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ . }}">{{ end }}
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:500|PT+Serif:400,400i,700,700i&amp;subset=latin-ext">
-    <link rel="stylesheet" href="css/main.css">
+    {{- $style := resources.Get "css/main.css" | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css" media="all">
 
     {{ with .Site.Params.favicon -}}
     <link rel="icon" href="{{ .image }}" type="{{ .type }}">
