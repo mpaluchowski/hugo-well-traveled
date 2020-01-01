@@ -8,7 +8,7 @@
 
             <div class="section__entries">
                 {{ if eq (len .Data.Pages) 0 }}
-                <div class="section__entry text"><p>{{ with .Params.teaser }}{{ . | safeHTML }}{{ else }}Coming soon...{{ end }}</p></div>
+                <div class="section__entry text"><p>{{ with .Params.teaser }}{{ . | markdownify | safeHTML }}{{ else }}Coming soon...{{ end }}</p></div>
                 {{ end }}
                 {{ range first 3 .Data.Pages }}
                 <article class="section__entry entry">
