@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "variables";
 
 @mixin header-link() {
@@ -12,7 +13,7 @@
 }
 
 @mixin text-link() {
-    border-bottom: 1px solid lighten($link-color, 50%);
+    border-bottom: 1px solid color.adjust($link-color, $lightness: 50%);
     color: $link-color;
     text-decoration: none;
 
