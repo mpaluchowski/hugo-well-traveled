@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 .section {
     @include background-cover();
 

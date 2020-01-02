@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 .navigator {
     border-top: 1px solid $secondary-color;
     box-sizing: border-box;
