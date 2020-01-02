@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main>
     <article class="article">
-        <header class="article__header{{ if .Params.image }} article__header--image{{ end }}"{{ with .Params.image }} style="background-image: url({{ . }});"{{ end }}>
+        <header id="article-header" class="article__header{{ if .Params.image }} article__header--image{{ end }}"{{ with .Params.image }} style="background-image: url({{ . }});"{{ end }}>
             <h1 class="article__title">{{ .Title }}</h1>
 
             <div class="article__placement"><time datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "Monday, January 2, 2006 15:04" }} {{ if isset .Params "timezone" }}{{ .Params.timezone }}{{ else }}{{ .Date.Format "MST" }}{{ end }}</time>{{ with .Params.location }} in {{ . }}{{ end }}</div>
@@ -33,7 +33,7 @@
     <div class="navigator__direction navigator__direction--previous">
     {{ with .PrevInSection }}
         <span class="navigator__direction-name">Previous</span>
-        <span class="navigator__direction-link"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+        <span class="navigator__direction-link"><a href="{{ .Permalink }}#article-header">{{ .Title }}</a></span>
         <div class="navigator__direction-summary text">
             {{ .Summary }}
         </div>
@@ -42,7 +42,7 @@
     <div class="navigator__direction navigator__direction--next">
     {{ with .NextInSection }}
         <span class="navigator__direction-name">Next</span>
-        <span class="navigator__direction-link"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+        <span class="navigator__direction-link"><a href="{{ .Permalink }}#article-header">{{ .Title }}</a></span>
         <div class="navigator__direction-summary text">
             {{ .Summary }}
         </div>
