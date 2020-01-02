@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "variables";
 @import "mixins";
 
@@ -86,7 +87,7 @@
         position: relative;
 
         &:before {
-            color: lighten($secondary-color, 30%);
+            color: color.adjust($secondary-color, $lightness: 30%);
             content: "\201C";
             display: block;
             font-size: 8em;
