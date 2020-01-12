@@ -30,6 +30,24 @@
     }
 }
 
+@mixin image-credit() {
+    bottom: 0;
+    color: #FFF;
+    font: {
+        family: $header-font;
+        size: .8rem;
+        weight: 400;
+    }
+    padding: .4em;
+    position: absolute;
+    right: 0;
+    text-shadow: 0 0 5px #000;
+
+    a {
+        color: #FFF;
+    }
+}
+
 @mixin header-font() {
     font: {
         family: $header-font;

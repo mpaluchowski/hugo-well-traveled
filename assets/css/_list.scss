@@ -7,10 +7,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
         @include background-cover();
 
         &--image {
             height: 300px;
+        }
+
+        &-image-credit {
+            @include image-credit;
         }
     }
 
