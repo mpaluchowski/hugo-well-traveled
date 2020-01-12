@@ -3,6 +3,7 @@
 
 .section {
     @include background-cover();
+    position: relative;
 
     &__content {
         box-sizing: border-box;
@@ -113,5 +114,9 @@
             }
         }
 
+    }
+
+    &__image-credit {
+        @include image-credit;
     }
 }
