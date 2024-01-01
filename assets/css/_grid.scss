@@ -4,9 +4,9 @@
 .grid {
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: $grid-width;
     display: grid;
-    grid-gap: 2rem 2rem;
+    grid-gap: $grid-gap;
 
     @media #{$responsive-small} {
         padding: $content-padding;
