@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+.grid {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: $grid-width;
+    display: grid;
+    grid-gap: $grid-gap;
+
+    @media #{$responsive-small} {
+        padding: $content-padding;
+    }
+
+    @media #{$responsive-medium-large} {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2rem;
+    }
+}

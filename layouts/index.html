@@ -1,5 +1,27 @@
 {{ define "main" }}
 <main>
+    {{ if ne (len .RegularPages) 0 -}}
+    <div class="grid">
+        {{ range first 3 .RegularPages }}
+        <article class="grid__entry entry">
+            {{ if .Params.image -}}
+                <img class="entry__image" src="{{ .Params.image }}">
+            {{- else -}}
+                {{ with .Site.Params.logo -}}
+                <div class="entry__image entry__image--placeholder" style="background-image: url({{ . }});"></div>
+                {{- end -}}
+            {{- end }}
+            <h3 class="entry__title"><a href="{{ .Permalink }}#article-header">{{ .Title }}</a></h3>
+            <div class="entry__placement"><time datetime="{{ .Date.Format "2006-01-02T15:04Z07:00" }}">{{ .Date.Format "January 2, 2006 15:04" }} {{ if isset .Params "timezone" }}{{ .Params.timezone }}{{ else }}{{ .Date.Format "MST" }}{{ end }}</time>{{ with .Params.location }} in {{ . }}{{ end }}</div>
+
+            <div class="entry__summary text">
+                {{ .Summary | plainify | safeHTML }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+    {{- end }}
+
     {{ range (where .Site.Pages "Kind" "section") }}
     <section class="section" id="section-{{ .Title | plainify | urlize }}"{{ with .Params.image }} style="background-image: url({{ .source }});"{{ end }}>
         <div class="section__content">
