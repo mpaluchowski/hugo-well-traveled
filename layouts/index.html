@@ -1,5 +1,6 @@
 {{ define "main" }}
 <main>
+    {{ if ne (len .RegularPages) 0 -}}
     <div class="grid">
         {{ range first 3 .RegularPages }}
         <article class="grid__entry entry">
@@ -19,6 +20,7 @@
         </article>
         {{ end }}
     </div>
+    {{- end }}
 
     {{ range (where .Site.Pages "Kind" "section") }}
     <section class="section" id="section-{{ .Title | plainify | urlize }}"{{ with .Params.image }} style="background-image: url({{ .source }});"{{ end }}>
