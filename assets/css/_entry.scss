@@ -12,6 +12,10 @@
         &--placeholder {
             @include background-cover();
             opacity: .1;
+
+            @media #{$responsive-small} {
+                display: none;
+            }
         }
     }
 
