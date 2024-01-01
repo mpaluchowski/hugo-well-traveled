@@ -3,6 +3,18 @@
 
 .entry {
 
+    &__image {
+        margin-bottom: 1em;
+        max-width: 100%;
+        display: block;
+        aspect-ratio: 1920 / 1080;
+
+        &--placeholder {
+            @include background-cover();
+            opacity: .1;
+        }
+    }
+
     &__title {
         font-size: 1.8em;
         margin: 0;
