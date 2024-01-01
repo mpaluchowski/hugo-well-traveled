@@ -28,6 +28,7 @@
     </article>
 </main>
 
+{{- if and .IsPage (ne .Section "") -}}
 <nav class="navigator">
     <div class="navigator__intro"><strong>Continue reading</strong> stories from {{ humanize .Section }}...</div>
     <div class="navigator__direction navigator__direction--previous">
@@ -49,4 +50,5 @@
     {{ end }}
     </div>
 </nav>
+{{ end }}
 {{ end }}
