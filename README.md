@@ -70,3 +70,11 @@ tags:
 image: img/bali-2016/bottom-line-on-bali/tegalalang-rice-terrace-statue-header.jpg
 ---
 ```
+
+## Development
+
+Run SASS to watch for updates and re-compile automatically:
+
+```shell
+$ sass -w .
+```

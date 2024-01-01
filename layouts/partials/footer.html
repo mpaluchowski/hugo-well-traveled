@@ -4,8 +4,8 @@
     {{- if and .IsPage (ne .Section "") -}}
         <span class="pages-nav__link"><a href="{{ .Section | absURL }}">{{ humanize .Section }}</a></span>
     {{ end }}
-    {{- range (where (where .Site.Pages "Section" "") "Kind" "page") -}}
-        <span class="pages-nav__link"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+    {{- range site.Menus.main -}}
+        <span class="pages-nav__link"><a href="{{ .Page.Permalink }}">{{ .Title }}</a></span>
     {{- end -}}
     </nav>
     <p class="footer__copyright text">{{ .Site.Copyright | safeHTML }}</p>

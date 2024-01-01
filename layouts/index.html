@@ -3,7 +3,7 @@
     {{ range (where .Site.Pages "Kind" "section") }}
     <section class="section" id="section-{{ .Title | plainify | urlize }}"{{ with .Params.image }} style="background-image: url({{ .source }});"{{ end }}>
         <div class="section__content">
-            <h2 class="section__name"><a href="{{ .Permalink }}#article-header">{{ .Title }}</a></h2>
+            <h2 class="section__name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 
             <div class="section__entries">
                 {{ if eq (len .Data.Pages) 0 }}
