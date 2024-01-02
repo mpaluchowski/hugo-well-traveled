@@ -2,6 +2,9 @@
 
 .pages-nav {
     &__link {
+        display: inline-block;
+        white-space: nowrap;
+
         & + & {
             margin-left: 2em;
 
