@@ -19,13 +19,13 @@
         flex: 0 0 100%;
         font-size: .9rem;
         line-height: $line-height;
-        padding: 1em .6em 0;
+        padding: 1.2rem 1.2rem 0;
     }
 
     &__direction {
         box-sizing: border-box;
         margin: 1em 0 0;
-        padding: 0 .6em;
+        padding: 0 1.2rem;
 
         @media #{$responsive-small} {
             flex: 0 1 100%;
