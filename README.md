@@ -67,7 +67,7 @@ title: The bottom line on Bali
 tags:
   - Bali
 # Main header image of the article; should be 16:9 and best size is 1920x1080px
-image: img/bali-2016/bottom-line-on-bali/tegalalang-rice-terrace-statue-header.jpg
+image: img/bali-2016/bottom-line-on-bali/tegalalang-rice-terrace-statue-header.webp
 ---
 ```
 
