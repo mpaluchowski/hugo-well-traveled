@@ -20,7 +20,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:description" content="{{ partial "description.html" . }}">
-    {{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+    {{ with .Params.image }}<meta property="og:image" content="{{ if reflect.IsMap . }}{{ .source | absURL }}{{ else }}{{ . | absURL }}{{ end }}">{{ end }}
 
     <link rel="canonical" href="{{ .Permalink }}">
     {{ if ne .Kind "404" }}{{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}">{{ end }}{{ end }}
