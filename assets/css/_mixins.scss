@@ -80,3 +80,21 @@
         }
     }
 }
+
+@mixin single-section-header() {
+    align-items: center;
+    box-sizing: border-box;
+    column-gap: .5em;
+    display: flex;
+    flex-flow: row nowrap;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:after {
+        border-top: 1px solid $secondary-color;
+        content: "";
+        display: block;
+        flex: 1 1 100%;
+    }
+}

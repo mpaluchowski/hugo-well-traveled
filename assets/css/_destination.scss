@@ -7,23 +7,11 @@
     max-width: $text-width;
 
     &__title {
-        align-items: center;
-        column-gap: .5em;
-        display: flex;
-        flex-flow: row nowrap;
-        font-weight: bold;
+        @include single-section-header();
         margin-bottom: 1em;
-        text-transform: uppercase;
 
         @media #{$responsive-small} {
             padding-left: .5em;
-        }
-
-        &:after {
-            border-top: 1px solid $secondary-color;
-            content: "";
-            display: block;
-            flex: 1 1 100%;
         }
     }
 

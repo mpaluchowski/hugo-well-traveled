@@ -15,23 +15,10 @@
 
     &__title {
         flex: 0 0 100%;
-        align-items: center;
-        column-gap: .5em;
-        display: flex;
-        flex-flow: row nowrap;
-        font-weight: bold;
-        text-transform: uppercase;
-        white-space: nowrap;
+        @include single-section-header();
 
         @media #{$responsive-small-medium} {
             padding-left: .5em;
-        }
-
-        &:after {
-            border-top: 1px solid $secondary-color;
-            content: "";
-            display: block;
-            flex: 1 1 100%;
         }
     }
 
