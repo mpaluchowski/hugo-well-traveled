@@ -1,0 +1,40 @@
+@import "variables";
+@import "mixins";
+
+.destination {
+    box-sizing: border-box;
+    margin: 3em auto 0;
+    max-width: $text-width;
+
+    &__title {
+        align-items: center;
+        column-gap: .5em;
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 0 0 auto;
+        font-weight: bold;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+
+        &:after {
+            border-top: 1px solid $secondary-color;
+            content: "";
+            display: block;
+            flex: 1 1 100%;
+        }
+    }
+
+    &__map {
+        text-align: center;
+
+        iframe {
+            border: 0;
+            height: 350px;
+            width: 100%;
+        }
+
+        &-link {
+            @include text-link();
+        }
+    }
+}

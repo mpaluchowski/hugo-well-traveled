@@ -26,6 +26,21 @@
             {{ end }}
         </footer>
     </article>
+
+    {{ if .Params.destination }}
+    <section class="destination">
+        {{ with .Params.destination.osm -}}
+        {{ $coordinates := split . "/" }}
+        {{ $bbox := print (sub (index $coordinates 1 | float) 0.03) "%2C" (sub (index $coordinates 0 | float) 0.015) "%2C" (add (index $coordinates 1 | float) 0.03) "%2C" (add (index $coordinates 0 | float) 0.015) }}
+        {{ $query := print "bbox=" $bbox "&marker=" (index $coordinates 0) "%2C" (index $coordinates 1) "&layer=mapnik" }}
+        <div class="destination__map">
+            <div class="destination__title">Location</div>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?{{ $query | safeURL }}" loading="lazy"></iframe>
+            <a class="destination__map-link" href="https://www.openstreetmap.org/?mlat={{ index $coordinates 0}}&amp;mlon={{ index $coordinates 1 }}">View the full map</a>
+        </div>
+        {{- end }}
+    </section>
+    {{ end }}
 </main>
 
 {{- if and .IsPage (ne .Section "") -}}
