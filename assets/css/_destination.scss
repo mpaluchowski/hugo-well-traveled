@@ -11,10 +11,13 @@
         column-gap: .5em;
         display: flex;
         flex-flow: row nowrap;
-        flex: 0 0 auto;
         font-weight: bold;
         margin-bottom: 1em;
         text-transform: uppercase;
+
+        @media #{$responsive-small} {
+            padding-left: .5em;
+        }
 
         &:after {
             border-top: 1px solid $secondary-color;
