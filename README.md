@@ -80,6 +80,51 @@ The `main` menu is a short list of links placed in the page's footer. By default
 
 To add more pages to the menu, [mark them up in the front matter](https://gohugo.io/content-management/menus/#define-in-front-matter), referencing the `main` menu.
 
+## Content Organization
+
+The content for the blog is organized into three groups:
+
+1. Stories---multi-article series, covering a longer trip,
+2. Singles---one-off articles,
+3. Others---pages that may cover info about authors, contacts, or similar.
+
+### Stories
+
+Stories rely on Hugo's sections, grouping articles in a subdirectory of `/content`:
+
+```
+/content
+    /india-2017
+        /first-article/index.md
+        /second-article/index.md
+        ...
+```
+
+These will appear on the home page as large blocks with the story's title, last three articles and a link to the page with all the story's content.
+
+### Singles
+
+Singles are meant for short write-ups, ie. from a day-trip that's not part of a bigger series. They should reside directly in the `/content` directory:
+
+```
+/content
+    /first-single-article/index.md
+    /second-single-article/index.md
+```
+
+The last three singles will appear at the top of the home page, with a link to browse further.
+
+### Others
+
+Others are meant for pages that don't describe any particular travel, but instead, usually, contain information about the website itself. These can be placed anywhere inside `/content`, but in order for them *not* to appear in any article list, their front matter should exclude them from lists:
+
+```yaml
+_build:
+    list: never
+```
+
+They can, instead, be added to the [main menu](#main-menu).
+
 ## Development
 
 Run SASS to watch for updates and re-compile automatically:
