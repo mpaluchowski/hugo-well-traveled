@@ -1,6 +1,6 @@
 # Well Traveled Hugo Theme
 
-Well Traveled is a minimal theme for Hugo---the static website generator. Originally built for use at https://travel.paluchowski.com/, my travel blog.
+Well Traveled is a minimal theme for Hugo—the static website generator. Originally built for use at https://travel.paluchowski.com/, my travel blog.
 
 Its focus is mainly on:
 
@@ -84,9 +84,9 @@ To add more pages to the menu, [mark them up in the front matter](https://gohugo
 
 The content for the blog is organized into three groups:
 
-1. Stories---multi-article series, covering a longer trip,
-2. Singles---one-off articles,
-3. Others---pages that may cover info about authors, contacts, or similar.
+1. Stories—multi-article series, covering a longer trip,
+2. Singles—one-off articles,
+3. Others—pages that may cover info about authors, contacts, or similar.
 
 ### Stories
 
