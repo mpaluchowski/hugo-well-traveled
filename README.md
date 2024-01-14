@@ -71,6 +71,15 @@ image: img/bali-2016/bottom-line-on-bali/tegalalang-rice-terrace-statue-header.w
 ---
 ```
 
+### Main Menu
+
+The `main` menu is a short list of links placed in the page's footer. By default it always includes:
+
+* the home page
+* the list page of the story section, when a story article is open
+
+To add more pages to the menu, [mark them up in the front matter](https://gohugo.io/content-management/menus/#define-in-front-matter), referencing the `main` menu.
+
 ## Development
 
 Run SASS to watch for updates and re-compile automatically:
