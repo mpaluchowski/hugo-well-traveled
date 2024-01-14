@@ -8,6 +8,18 @@ Its focus is mainly on:
 * support for high quality photos,
 * content organization by subsequent travels I've undertaken.
 
+- [Well Traveled Hugo Theme](#well-traveled-hugo-theme)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+    - [Site Configuration](#site-configuration)
+    - [Content Front Matter](#content-front-matter)
+    - [Main Menu](#main-menu)
+  - [Content Organization](#content-organization)
+    - [Stories](#stories)
+    - [Singles](#singles)
+    - [Others](#others)
+  - [Development](#development)
+
 ## Installation
 
 Clone the repository to your `/themes` directory, ie.
