@@ -16,13 +16,13 @@
         </section>
 
         <footer class="article__footer">
-            {{ with .Params.tags}}
+            {{ with .GetTerms "tags" -}}
             <nav class="article__tags">
                 Topics:&nbsp;<ul class="tags">
-                    {{ range sort . }}<li class="tags__tag"><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+                    {{ range sort . "LinkTitle" }}<li class="tags__tag"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
                 </ul>
             </nav>
-            {{ end }}
+            {{- end }}
         </footer>
     </article>
 
