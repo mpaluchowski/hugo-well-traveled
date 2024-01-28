@@ -18,8 +18,7 @@
         <footer class="article__footer">
             {{ with .Params.tags}}
             <nav class="article__tags">
-                Topics:
-                <ul class="tags">
+                Topics:&nbsp;<ul class="tags">
                     {{ range sort . }}<li class="tags__tag"><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
                 </ul>
             </nav>
