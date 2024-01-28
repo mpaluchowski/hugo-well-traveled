@@ -7,7 +7,7 @@
 
     {{ hugo.Generator }}
     <meta name="build-timestamp" content="{{ now.Format "2006-01-02T15:04:05-0700" }}">
-    {{ $indexedPages := slice "page" "home" -}}
+    {{ $indexedPages := slice "home" "section" "page" -}}
     {{ if in $indexedPages .Kind -}}
     <meta name="robots" content="index,follow">
     {{- else -}}
