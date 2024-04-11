@@ -23,7 +23,7 @@
     {{ with .Params.image }}<meta property="og:image" content="{{ if reflect.IsMap . }}{{ .source | absURL }}{{ else }}{{ . | absURL }}{{ end }}">{{ end }}
 
     <link rel="canonical" href="{{ .Permalink }}">
-    {{ if ne .Kind "404" }}{{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}">{{ end }}{{ end }}
+    {{ if ne .Kind "404" }}{{ with .OutputFormats.Get "RSS" }}<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ page.Title }}">{{ end }}{{ end }}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500|PT+Serif:400,400i,700,700i&amp;subset=latin-ext&amp;display=swap">
     {{- $style := resources.Get "css/main.css" | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css" media="all">
