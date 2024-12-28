@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@use "variables";
+@use "mixins";
 
 .entry {
 
@@ -10,10 +10,10 @@
         aspect-ratio: 1920 / 1080;
 
         &--placeholder {
-            @include background-cover();
+            @include mixins.background-cover();
             opacity: .1;
 
-            @media #{$responsive-small} {
+            @media #{variables.$responsive-small} {
                 display: none;
             }
         }
@@ -23,14 +23,14 @@
         font-size: 1.8em;
         margin: 0;
 
-        @include header-font();
-        @include header-link();
+        @include mixins.header-font();
+        @include mixins.header-link();
     }
 
     &__placement {
-        color: $secondary-color;
+        color: variables.$secondary-color;
         font-size: .9em;
-        line-height: $line-height;
+        line-height: variables.$line-height;
         margin-top: .5em;
     }
 

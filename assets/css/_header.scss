@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .header {
     a {
@@ -6,7 +6,7 @@
         text-decoration: none;
 
         &:hover {
-            color: $link-color;
+            color: variables.$link-color;
         }
     }
 
@@ -24,7 +24,7 @@
         font-size: 1.6rem;
         margin: .8rem 0;
 
-        @media #{$responsive-medium-large} {
+        @media #{variables.$responsive-medium-large} {
             display: inline-block;
 
             & + & {

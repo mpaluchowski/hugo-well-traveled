@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@use "variables";
+@use "mixins";
 
 .jumbotron {
     align-items: center;
@@ -11,7 +11,7 @@
     &--image {
         min-height: 100vh;
 
-        @include background-cover();
+        @include mixins.background-cover();
     }
 
     &__title {
@@ -19,13 +19,13 @@
         box-sizing: border-box;
         font-size: 3em;
         padding: .4em .6em;
-        @include header-font();
+        @include mixins.header-font();
     }
 
     &__text {
         background: #FFF;
         flex: 0 0 auto;
-        max-width: $text-width;
+        max-width: variables.$text-width;
         padding: 1rem 1.2rem;
     }
 }

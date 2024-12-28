@@ -1,23 +1,23 @@
-@import "variables";
-@import "mixins";
+@use "variables";
+@use "mixins";
 
 .navigator {
     box-sizing: border-box;
     display: flex;
     flex-flow: row wrap;
     margin: 3em auto 0;
-    max-width: $content-width;
+    max-width: variables.$content-width;
     padding: 0 0 1em;
 
-    @media #{$responsive-small} {
+    @media #{variables.$responsive-small} {
         flex-direction: column;
     }
 
     &__title {
         flex: 0 0 100%;
-        @include single-section-header();
+        @include mixins.single-section-header();
 
-        @media #{$responsive-small-medium} {
+        @media #{variables.$responsive-small-medium} {
             padding-left: .5em;
         }
     }
@@ -26,7 +26,7 @@
         box-sizing: border-box;
         flex: 0 0 100%;
         font-size: .9rem;
-        line-height: $line-height;
+        line-height: variables.$line-height;
         padding: 1.2rem 1.2rem 0;
     }
 
@@ -35,7 +35,7 @@
         margin: 1em 0 0;
         padding: 0 1.2rem;
 
-        @media #{$responsive-small} {
+        @media #{variables.$responsive-small} {
             flex: 0 1 100%;
 
             &--previous {
@@ -47,12 +47,12 @@
             }
         }
 
-        @media #{$responsive-medium-large} {
+        @media #{variables.$responsive-medium-large} {
             flex: 0 1 50%;
         }
 
         &-name {
-            color: $secondary-color;
+            color: variables.$secondary-color;
             display: block;
             font: {
                 size: .8rem;
@@ -67,10 +67,10 @@
         &-link {
             display: block;
             font: {
-                family: $header-font;
+                family: variables.$header-font;
             }
 
-            @include header-link();
+            @include mixins.header-link();
         }
 
         &-summary {

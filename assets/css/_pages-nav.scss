@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins";
 
 .pages-nav {
     &__link {
@@ -16,7 +16,7 @@
         }
 
         a {
-            @include text-link();
+            @include mixins.text-link();
         }
     }
 }

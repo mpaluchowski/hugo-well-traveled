@@ -1,18 +1,18 @@
-@import "variables";
-@import "mixins";
+@use "variables";
+@use "mixins";
 
 .grid {
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: $grid-width;
+    max-width: variables.$grid-width;
     display: grid;
-    grid-gap: $grid-gap;
+    grid-gap: variables.$grid-gap;
 
-    @media #{$responsive-small} {
-        padding: $content-padding;
+    @media #{variables.$responsive-small} {
+        padding: variables.$content-padding;
     }
 
-    @media #{$responsive-medium-large} {
+    @media #{variables.$responsive-medium-large} {
         grid-template-columns: 1fr 1fr 1fr;
         padding: 2rem;
     }

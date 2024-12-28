@@ -1,17 +1,17 @@
 @use "sass:color";
-@import "variables";
-@import "mixins";
+@use "variables";
+@use "mixins";
 
 .destination {
     box-sizing: border-box;
     margin: 3em auto 0;
-    max-width: $text-width;
+    max-width: variables.$text-width;
 
     &__title {
-        @include single-section-header();
+        @include mixins.single-section-header();
         margin-bottom: 1em;
 
-        @media #{$responsive-small} {
+        @media #{variables.$responsive-small} {
             padding-left: .5em;
         }
     }
@@ -20,14 +20,14 @@
         text-align: center;
 
         iframe {
-            background: color.scale($secondary-color, $lightness: 90%);
+            background: color.scale(variables.$secondary-color, $lightness: 90%);
             border: 0;
             height: 350px;
             width: 100%;
         }
 
         &-link {
-            @include text-link();
+            @include mixins.text-link();
         }
     }
 }

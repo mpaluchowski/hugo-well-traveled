@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "variables";
+@use "variables";
 
 @mixin header-link() {
     a {
@@ -7,18 +7,18 @@
         text-decoration: none;
 
         &:hover {
-            color: $link-color;
+            color: variables.$link-color;
         }
     }
 }
 
 @mixin text-link() {
-    border-bottom: 1px solid color.adjust($link-color, $lightness: 50%);
-    color: $link-color;
+    border-bottom: 1px solid color.adjust(variables.$link-color, $lightness: 50%);
+    color: variables.$link-color;
     text-decoration: none;
 
     &:hover {
-        color: $secondary-color;
+        color: variables.$secondary-color;
     }
 }
 
@@ -34,7 +34,7 @@
     bottom: 0;
     color: #FFF;
     font: {
-        family: $header-font;
+        family: variables.$header-font;
         size: .8rem;
         weight: 400;
     }
@@ -50,19 +50,19 @@
 
 @mixin header-font() {
     font: {
-        family: $header-font;
+        family: variables.$header-font;
         weight: 500;
     }
 }
 
 @mixin side-floated-content() {
-    @media #{$responsive-medium} {
+    @media #{variables.$responsive-medium} {
         &.left, &.right {
-            max-width: calc(50% - 1em + #{$content-padding});
+            max-width: calc(50% - 1em + #{variables.$content-padding});
         }
     }
 
-    @media #{$responsive-medium-large} {
+    @media #{variables.$responsive-medium-large} {
         &.left {
             float: left;
             margin-right: 2em;
@@ -74,7 +74,7 @@
         }
     }
 
-    @media #{$responsive-large} {
+    @media #{variables.$responsive-large} {
         &.left, &.right {
             max-width: calc(50% - 1em);
         }
@@ -92,7 +92,7 @@
     white-space: nowrap;
 
     &:after {
-        border-top: 1px solid $secondary-color;
+        border-top: 1px solid variables.$secondary-color;
         content: "";
         display: block;
         flex: 1 1 100%;

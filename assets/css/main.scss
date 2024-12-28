@@ -1,25 +1,26 @@
-@import "variables";
-@import "mixins";
-@import "normalize";
+@use "sass:meta";
+@use "variables";
+@use "mixins";
+@use "normalize";
 
 html {
     font: {
-        family: $default-font;
+        family: variables.$default-font;
         size: 18px;
     }
 }
 
-@import "page";
-@import "section";
-@import "entry";
-@import "list";
-@import "grid";
-@import "article";
-@import "destination";
-@import "text";
-@import "tags";
-@import "navigator";
-@import "header";
-@import "pages-nav";
-@import "footer";
-@import "jumbotron";
+@include meta.load-css("page");
+@include meta.load-css("section");
+@include meta.load-css("entry");
+@include meta.load-css("list");
+@include meta.load-css("grid");
+@include meta.load-css("article");
+@include meta.load-css("destination");
+@include meta.load-css("text");
+@include meta.load-css("tags");
+@include meta.load-css("navigator");
+@include meta.load-css("header");
+@include meta.load-css("pages-nav");
+@include meta.load-css("footer");
+@include meta.load-css("jumbotron");

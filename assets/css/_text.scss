@@ -1,9 +1,9 @@
 @use "sass:color";
-@import "variables";
-@import "mixins";
+@use "variables";
+@use "mixins";
 
 .text {
-    line-height: $line-height;
+    line-height: variables.$line-height;
 
     &:after {
         clear: both;
@@ -26,29 +26,29 @@
 
     p, ul, ol, h2, h3, blockquote {
         box-sizing: border-box;
-        max-width: $text-width;
+        max-width: variables.$text-width;
     }
 
     hr {
         border: 0;
-        border-top: 1px solid $secondary-color;
+        border-top: 1px solid variables.$secondary-color;
         height: 1px;
         margin: {
             top: 2em;
             bottom: 2em;
         }
 
-        @media #{$responsive-small-medium} {
+        @media #{variables.$responsive-small-medium} {
             max-width: 50%;
         }
 
-        @media #{$responsive-large} {
-            max-width: calc($text-width / 2);
+        @media #{variables.$responsive-large} {
+            max-width: calc(variables.$text-width / 2);
         }
     }
 
     a {
-        @include text-link();
+        @include mixins.text-link();
     }
 
     img {
@@ -58,18 +58,18 @@
     figure {
         text-align: center;
 
-        @media #{$responsive-small-medium} {
+        @media #{variables.$responsive-small-medium} {
             margin: {
-                left: -$content-padding;
-                right: -$content-padding;
+                left: -(variables.$content-padding);
+                right: -(variables.$content-padding);
             }
         }
 
-        @include side-floated-content();
+        @include mixins.side-floated-content();
 
         figcaption {
-            color: $secondary-color;
-            font-family: $default-font;
+            color: variables.$secondary-color;
+            font-family: variables.$default-font;
 
             > * {
                 font: {
@@ -87,7 +87,7 @@
         position: relative;
 
         &:before {
-            color: color.adjust($secondary-color, $lightness: 30%);
+            color: color.adjust(variables.$secondary-color, $lightness: 30%);
             content: "\201C";
             display: block;
             font-size: 8em;
@@ -106,10 +106,10 @@
     }
 
     .spotify-playlist {
-        @media #{$responsive-small-medium} {
+        @media #{variables.$responsive-small-medium} {
             text-align: center;
         }
 
-        @include side-floated-content();
+        @include mixins.side-floated-content();
     }
 }

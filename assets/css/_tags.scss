@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins";
 
 .tags {
     display: inline;
@@ -15,7 +15,7 @@
         }
 
         a {
-            @include text-link();
+            @include mixins.text-link();
         }
     }
 }

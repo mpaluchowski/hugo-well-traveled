@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@use "variables";
+@use "mixins";
 
 .list {
     &__header {
@@ -8,20 +8,20 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
-        @include background-cover();
+        @include mixins.background-cover();
 
         &--image {
             height: 300px;
         }
 
         &-image-credit {
-            @include image-credit;
+            @include mixins.image-credit;
         }
     }
 
     &__description {
         background: #FFF;
-        color: $secondary-color;
+        color: variables.$secondary-color;
         flex: 0 0 auto;
         margin-top: 1.4rem;
         text-align: center;
@@ -33,20 +33,20 @@
         margin: 0;
         padding: .4em .6em;
 
-        @include header-font();
+        @include mixins.header-font();
     }
 
     &__entries {
         margin: 3em 0 0;
         padding: {
-            left: $content-padding;
-            right: $content-padding;
+            left: variables.$content-padding;
+            right: variables.$content-padding;
         }
     }
 
     &__entry {
         margin: 0 auto;
-        max-width: $text-width;
+        max-width: variables.$text-width;
 
         & + & {
             margin-top: 2em;

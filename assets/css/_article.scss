@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@use "variables";
+@use "mixins";
 
 .article {
     margin: 0 auto;
@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        @include background-cover();
+        @include mixins.background-cover();
 
         &--image {
             box-sizing: border-box;
@@ -27,36 +27,36 @@
         font-size: 3em;
         padding: .4em .6em;
 
-        @include header-font();
+        @include mixins.header-font();
     }
 
     &__placement {
-        line-height: $line-height;
+        line-height: variables.$line-height;
         padding: .6em .8em;
     }
 
     &__stats {
-        color: $secondary-color;
+        color: variables.$secondary-color;
         padding: .6em .8em;
     }
 
     &__text, &__footer {
         margin: 3em auto 0;
         padding: {
-            left: $content-padding;
-            right: $content-padding;
+            left: variables.$content-padding;
+            right: variables.$content-padding;
         }
     }
 
     &__text {
-        max-width: $content-width;
+        max-width: variables.$content-width;
     }
 
     &__footer {
-        max-width: $text-width;
+        max-width: variables.$text-width;
     }
 
     &__tags {
-        line-height: $line-height;
+        line-height: variables.$line-height;
     }
 }
