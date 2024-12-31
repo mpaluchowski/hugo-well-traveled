@@ -43,7 +43,7 @@
         }
 
         @media #{variables.$responsive-large} {
-            max-width: calc(variables.$text-width / 2);
+            max-width: variables.$text-width / 2;
         }
     }
 
