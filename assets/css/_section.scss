@@ -33,6 +33,8 @@
         box-sizing: border-box;
         padding: .4em .6em;
 
+        @include mixins.header-font();
+
         @media #{variables.$responsive-small} {
             font-size: 2.4rem;
         }
@@ -46,7 +48,6 @@
             font-size: 3.2rem;
         }
 
-        @include mixins.header-font();
         @include mixins.header-link();
     }
 
