@@ -105,6 +105,13 @@
         }
     }
 
+    .footnotes {
+        > * {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     .spotify-playlist {
         @media #{variables.$responsive-small-medium} {
             text-align: center;
