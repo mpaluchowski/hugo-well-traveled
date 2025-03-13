@@ -56,11 +56,26 @@ title: Well Traveled
 languageCode: "en-us"
 # Google Analytics ID
 googleAnalytics: UA-2971180-12
+# Name of the main author
+author: "Michał Paluchowski"
 # Copyright statement used in the footer
 copyright: 'Made around the world by <a href="https://michal.paluchowski.com/">Michał Paluchowski</a>. All content is under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.'
 params:
+  # Relative path to the logo image
+  logo: img/compass-rose.svg
+  favicon:
+    # Path to the favicon image  
+    image: favicon.png
+    # Mime type of the favicon image
+    type: image/png
   # Description used in the main page's META tag
   description: 'Stories from extended travels, endeavored by Milena & Michał Paluchowski. Highly opinionated. Mildly biased. A mixture of intersecting thoughts from our hearts and minds.'
+  # Content for the 404 error page
+  error404:
+    # Title for the page
+    title: Lost a page?
+    # Text for the page
+    text: We couldn't find anything under the address you requested. You may want to start from the <a href="/">homepage</a> or go back and try another link.
 ```
 
 ### Content Front Matter
