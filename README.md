@@ -146,7 +146,7 @@ The last three singles will appear at the top of the home page, with a link to b
 Others are meant for pages that don't describe any particular travel, but instead, usually, contain information about the website itself. These can be placed anywhere inside `/content`, but in order for them *not* to appear in any article list, their front matter should exclude them from lists:
 
 ```yaml
-_build:
+build:
     list: never
 ```
 
