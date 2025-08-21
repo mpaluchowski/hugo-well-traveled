@@ -2,7 +2,7 @@
 <main class="page__main list">
     <header class="list__header{{ if .Params.image }} list__header--image{{ end }}"{{ with .Params.image }} style="background-image: url({{ .source }});"{{ end }}>
         <h1 class="list__title">{{ .Title }}</h1>
-        <aside class="list__header-image-credit">{{ with .Params.image.credit }}{{ . | markdownify }}{{ end }}</aside>
+        {{ with .Params.image.credit }}<aside class="list__header-image-credit">{{ . | markdownify }}</aside>{{ end }}
     </header>
 
     <div class="list__entries">

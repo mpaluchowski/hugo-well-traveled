@@ -48,7 +48,7 @@
                 {{ end }}
             </div>
         </div>
-        <aside class="section__image-credit">{{ with .Params.image.credit }}{{ . | markdownify | safeHTML }}{{ end }}</aside>
+        {{ with .Params.image.credit }}<aside class="section__image-credit">{{ . | markdownify | safeHTML }}</aside>{{ end }}
     </section>
     {{ end }}
 </main>
